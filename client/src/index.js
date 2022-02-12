@@ -27,7 +27,7 @@ const init = async () => {
 
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: `http://${process.env.CLIENT_URL}:4000/graphql`,
+    uri: `http://${process.env.REACT_APP_CLIENT_URL}:4000/graphql`,
     credentials: "include",
   }),
   cache: cache,
