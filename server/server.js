@@ -75,15 +75,15 @@ app.use(
 );
 /* -------------------------- Configure Production -------------------------- */
 // app.use(express.static("client/build"));
-app.use(
-  express.static(
-    path.join(
-      "/Users/omarragab/Documents/Job/ResumeProject1",
-      "client",
-      "build"
-    )
-  )
-);
+// app.use(
+//   express.static(
+//     path.join(
+//       "/Users/omarragab/Documents/Job/ResumeProject1",
+//       "client",
+//       "build"
+//     )
+//   )
+// );
 console.log(__dirname);
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
