@@ -20,7 +20,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: true,
-  origins: ["http://localhost:3000"],
+  origins: `http://${process.env.CLIENT_URL}:3000`,
 });
 
 /* ------------------------------- Mongo Setup ------------------------------ */
