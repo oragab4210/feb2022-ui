@@ -6,7 +6,7 @@ import { useQuery, useMutation } from "@apollo/client";
 import useMessages from "./useMessages";
 
 const NEW_MESSAGE_EVENT = "newMessage";
-const SOCKET_SERVER_URL = "http://localhost:4000";
+const SOCKET_SERVER_URL = `http://${process.env.CLIENT_URL}:4000`;
 
 const useChatRoom = () => {
   const previousMessages = useAppSelector(

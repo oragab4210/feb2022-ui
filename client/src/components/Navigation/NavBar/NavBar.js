@@ -13,7 +13,7 @@ import mutation from "../../../GQL/mutations/Logout";
 import ProfileDropdownInitiator from "../ProfileDropdownInitiator/ProfileDropdownInitiator";
 import TestDropDown from "../TestDropDown/TestDropDown";
 import socketIOClient from "socket.io-client";
-const SOCKET_SERVER_URL = "http://localhost:4000";
+const SOCKET_SERVER_URL = `http://${process.env.CLIENT_URL}:4000`;
 
 const NavBar = () => {
   const { pathname } = useLocation();
